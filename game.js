@@ -64,8 +64,8 @@ function getNewQuestion() {
 }
 
 for (i=0; i<choices.length; i++) {
-	choices[i].addEventListener("click", function(){
-	if (!acceptingAnswers) return;
+  choices[i].addEventListener("click", function(){
+  if (!acceptingAnswers) return;
 
     acceptingAnswers = false;
     const selectedChoice = event.target;
@@ -80,8 +80,8 @@ for (i=0; i<choices.length; i++) {
       selectedChoice.parentElement.classList.remove(classToApply);
       getNewQuestion();
     }, 1000);
-  	});
+    });
 
-	}
+  }
 
 startGame();
